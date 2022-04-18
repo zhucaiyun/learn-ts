@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2022-04-15 17:23:16
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2022-04-15 18:24:24
+ * @LastEditTime : 2022-04-18 14:08:47
  * @Description  : 枚举类型 enum
  * https://www.typescriptlang.org/play?#code/PTAEi+9Q66MA3lHnrQZCMMdyhAD0L8JrBOpoADlCyCQKAFMA7AVwFtQAlAewBsDQBvUPUKgUQBFQBeUARgA0rUACEAMgFV2wtgHFK7dgDlZoAOoAJAJIAVdngC+eAMbUiAZzoEAdLWoBzABQ16ASiA
  */
@@ -43,9 +43,12 @@ enum Char {
   c = 1 + 3,
   d = Math.random(),
   e = '123'.length,
-  f = 4
+  // f,报错
+  // f='a', // 报错
+  f=4,
+  g,
 }
-
+console.log(Char[0]) // b 以最后一个为准
 // 常量枚举
 const enum Month { 
   yi,
@@ -53,3 +56,28 @@ const enum Month {
   san
 }
 let mon = [Month.yi,Month.er,Month.san] // let mon = [0 /* yi */, 1 /* er */, 2 /* san */];
+// PRACTICE：角色权限题
+function initByRole(role:number|undefined):void { 
+  if (role === 1 || role === 2) {
+    console.log('role')
+  } else if (role === 3) {
+
+  } else if (role === 4) {
+
+  } else { 
+
+  }
+}
+// // 使用枚举来写
+enum Role { 
+   // 枚举成员不能具有数值名。
+  do1or2 = 1,
+  sth2 = 2,
+  do3 = 3,
+  do4 = 4
+}
+
+function initByRole1(role: number ): void { 
+  console.log(Role[role]||'doElese')
+}
+initByRole(1)
