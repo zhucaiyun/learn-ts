@@ -2,10 +2,10 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2022-04-15 15:59:36
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2022-04-18 13:57:02
+ * @LastEditTime : 2022-04-19 18:12:49
  * @Description  : 描述信息
  */
-import './enum.ts'
+import './class.ts'
 let hello: string = 'hello world' // var hello = 'hello world';
 
 // document.querySelectorAll("#app")[0].innerHTML = hello

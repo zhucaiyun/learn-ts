@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2022-04-18 14:08:55
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2022-04-18 17:21:01
+ * @LastEditTime : 2022-04-19 18:17:16
  * @Description  : 接口
  */
 interface list { 
@@ -96,11 +96,20 @@ interface Add {
 }
 let sum1: Add = (x, y) => x + y
 
-// 类型别名
+// 3、类型别名 使用type来定义
 type Sum = (a: number, b: number) => number
 let add1: Sum = (a, b) => a + b
 
-// 
-// 实现 implements
+// 混合接口 函数和对象
+interface Lib { 
+  (): void;
+  version: string;
+  dosomething: ()=>void
+}
+let lib: Lib = (() => { }) as Lib // 不加 Lib的话会一直提示lib有问题
+lib.version = '1.0.0'
+lib.dosomething = () => { }
 
-// 继承 extends
+// 实现 implements 参见类
+
+// 继承 extends 参见类
