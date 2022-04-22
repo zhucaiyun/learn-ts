@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2022-04-19 18:00:42
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2022-04-21 18:29:12
+ * @LastEditTime : 2022-04-22 11:21:15
  * @Description  : 类的继承和成员修饰符
  */
 class Dog { 
@@ -115,14 +115,15 @@ console.log(new Myflow().next()) // Myflow
 console.log(new Myflow().step1()) // Myflow
 console.log(new Myflow().next().step1()) // Myflow  // 我理解这里都是子类的this吧
 
-// 类和接口
+// 类和接口 接口只能约束类的共有成员 不能约束protected和private
 interface animals { 
   legs: number;
   getVoice?():void
 }
 
+// 类实现接口
 class Ani implements animals { 
-  legs = 4
+  legs = 4 //private
   getVoice(): void {
     console.log('voice')
   }
@@ -142,10 +143,14 @@ class Bio implements bio {
 
 class Sea { 
   size: string = 'big'
+  private color: string = 'blue'
 }
 
+// 接口继承类
 interface sea extends Sea { }
 
-class allSea implements sea { 
+class allSea extends Sea implements sea {  
   size = 'small'
+  // color = 'blue' // 如果不extends的话，类“allSea”错误实现接口“sea”。 属性“color”在类型“Sea”中是私有属性，但在类型“allSea”中不是。
 }
+// 接口会抽离类的私有成员和受保护成员
