@@ -6,13 +6,18 @@
  * @Description  : 类的继承和成员修饰符
  */
 class Dog { 
-  constructor(name: string) { 
+  constructor(private name: string) { 
     this.name = name
     this.legs = 4
+    this.color = 'red'
   }
-  name: string
-  legs: number //属性“legs”没有初始化表达式，且未在构造函数中明确赋值。
-  run() { }
+  // private name: string
+  readonly legs: number //属性“legs”没有初始化表达式，且未在构造函数中明确赋值。
+  protected color: string
+  static run() {
+    console.log(this.name)
+    // this.legs = 6 // 只读
+  }
   voice() { }
 }
 // 类成员的属性都是实例属性而不是原型属性
@@ -20,23 +25,29 @@ class Dog {
 // 属性必须有初始值 属性可以可选属性
 console.log(Dog.prototype) // run voice constructor
 let myDog = new Dog('wang wang')
+// myDog.color = 'brown' // 属性“color”受保护，只能在类“Dog”及其子类中访问。
+// myDog.name="xiongmao" // 属性“name”为私有属性，只能在类“Dog”中访问。 
 console.log(myDog) // legs: 4 name: "wang wang"
-
+Dog.run()
+// myDog.run() //属性“run”在类型“Dog”上不存在。你的意思是改为访问静态成员“Dog.run”吗?t
 // 类的继承 extends super
 class Husky extends Dog { 
-  constructor(name: string) { 
+  constructor( name: string) { 
     // 派生类的构造函数必须包含 "super" 调用。
     super(name)
     // this.tail = 'long' // this放到super后面
+    // this.legs = 5 // 无法分配到 "legs" ，因为它是只读属性
   }
   color: string = 'black'
   tail: string ="long" // 派生类的构造函数必须包含 "super" 调用。
+  getColor() {console.log(this.color)}
 }
 
 /*
-* public
+* public：默认
 * private
-* protocol
+* protected
+* static
 */
 
 
