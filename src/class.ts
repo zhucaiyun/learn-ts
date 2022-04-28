@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2022-04-19 18:00:42
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2022-04-22 11:21:15
+ * @LastEditTime : 2022-04-24 09:54:54
  * @Description  : 类的继承和成员修饰符
  */
 class Dog { 
@@ -54,7 +54,6 @@ class Husky extends Dog {
 /*
 * 抽象类：抽取公共的属性方法；实现多态
 * 多态
-* 
 */
 abstract class Animal { 
   constructor(name: string) { 
