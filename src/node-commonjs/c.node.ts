@@ -5,3 +5,5 @@
  * @LastEditTime : 2022-04-29 17:57:23
  * @Description  : 描述信息
  */
+exports.a = {cx:1,cy:2}
+exports.b={cz:1,cf:2}

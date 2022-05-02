@@ -7,7 +7,7 @@
  */
 
 /// <reference path="./b.ts" />
-namespace Shape1 {
+namespace Shape {
   export function square(x:number) {
     return x*x
   }
@@ -15,9 +15,9 @@ namespace Shape1 {
     return x*x
   }
 }
-console.log(Shape1.circle(1))
-console.log(Shape1.square(2))
+// console.log(Shape.circle(1))
+// console.log(Shape.square(2))
 
 // 命名别名
-import circle = Shape1.circle
-console.log(circle(3))
+// import circle = Shape.circle
+// console.log(circle(3))

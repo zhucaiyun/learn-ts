@@ -5,8 +5,10 @@
  * @LastEditTime : 2022-04-29 18:25:00
  * @Description  : 描述信息
  */
-namespace Shape1 {
-  export function circle(x:number) {
-    return Math.PI*x*x
-  }
-}
+var Shape;
+(function (Shape) {
+    function circle(x) {
+        return Math.PI * x * x;
+    }
+    Shape.circle = circle;
+})(Shape || (Shape = {}));

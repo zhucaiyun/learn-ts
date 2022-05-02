@@ -5,7 +5,7 @@
  * @LastEditTime : 2022-04-29 11:38:11
  * @Description  : 描述信息
  */
-import './senior-type.ts'
+import './merge.ts'
 let hello: string = 'hello world' // var hello = 'hello world';
 
 // document.querySelectorAll("#app")[0].innerHTML = hello

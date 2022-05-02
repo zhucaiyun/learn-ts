@@ -5,3 +5,7 @@
  * @LastEditTime : 2022-04-29 17:57:16
  * @Description  : 描述信息
  */
+let c = require('./a.node')
+console.log(c) // {x:1,y:2}
+let z = require('./c.node')
+console.log(z) //{ a: { cx: 1, cy: 2 }, b: { cz: 1, cf: 2 } }

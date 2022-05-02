@@ -163,4 +163,4 @@ class allSea extends Sea implements sea {
   size = 'small'
   // color = 'blue' // 如果不extends的话，类“allSea”错误实现接口“sea”。 属性“color”在类型“Sea”中是私有属性，但在类型“allSea”中不是。
 }
-// 接口会抽离类的私有成员和受保护成员
+// 接口会抽离类的私有成员和受保护成员 

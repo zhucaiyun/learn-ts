@@ -6,3 +6,11 @@
  * @Description  : 描述信息
  */
 var hello = 'hello world';
+var Libs
+(function (Libs) {
+  Libs.version = '1';
+})(Libs || (Libs = {}));
+function Libs() { }
+
+
+console.log(Libs.version);
