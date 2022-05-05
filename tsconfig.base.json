@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.operation",
+  // 编译器需要编译的单个文件的列表
+  "files": ["src/config.ts"],
+  // 编译器需要编译的文件||目录
+  "include": [
+    "src/*/*" // src/* src子文件编译，孙文件及以后不编译  src/*/*   File specification cannot end in a recursive directory wildcard ('**'): 'src/**'.  // src/**/* 递归匹配所有的子目录
+  ],
+  "exclude": [
+    // 编译排除的文件
+    "src/lib"
+  ],
+  "compileOnSave": true
+}

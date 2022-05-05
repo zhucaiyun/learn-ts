@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.c = exports.d = void 0;
 /*
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2022-04-29 17:19:41
@@ -9,10 +12,6 @@
 * 模块化：
 *
 */
-export let d = 1
-export interface P {
-  voice: 'string',
-  types: 'string'
-}
-export let c ='defaults'
-export default c
+exports.d = 1;
+exports.c = 'defaults';
+exports.default = exports.c;
