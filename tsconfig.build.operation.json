@@ -1,0 +1,11 @@
+// 构建配置
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonJs",
+    "strict": true,
+    "composite": true,
+    "declaration": true
+    // "outDir": "./distTs"
+  }
+}

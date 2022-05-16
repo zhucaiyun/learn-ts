@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.build.operation.json",
+  "compilerOptions": {
+    "outDir": "../../distTs/namespace"
+  },
+  "references": [
+    {"path": "../lib"}
+  ]
+}

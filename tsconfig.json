@@ -1,4 +1,9 @@
+// {
+//   "extends": "./tsconfig.base" ,
+//   "files": ["src/config.ts","src/class.ts"]
+// }
+
+// 项目构建
 {
-  "extends": "./tsconfig.base" ,
-  "files": ["src/config.ts","src/class.ts"]
+  "extends": "./tsconfig.build.operation.json"
 }

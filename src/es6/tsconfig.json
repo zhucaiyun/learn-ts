@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.build.operation",
+  "compilerOptions": {
+    "outDir": "../../distTs/client"
+  },
+  //  依赖
+  "references": [
+    {"path": "../lib"}
+  ]
+}

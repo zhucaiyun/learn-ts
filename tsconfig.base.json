@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.operation",
+  "extends": "./tsconfig.build.operation",
   // 编译器需要编译的单个文件的列表
   "files": ["src/config.ts"],
   // 编译器需要编译的文件||目录
